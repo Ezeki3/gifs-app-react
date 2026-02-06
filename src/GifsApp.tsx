@@ -1,3 +1,4 @@
+import GifList from "./gifs/components/GifList";
 import { PreviousSearches } from "./gifs/components/PreviousSearches";
 import { mockGifs } from "./mock-data/gifs.mock";
 import CustomHeader from "./shared/components/CustomHeader";
@@ -18,18 +19,14 @@ export default function GifsApp() {
             />
 
             {/* Busquedas previas */}
-            <PreviousSearches />
+            <PreviousSearches
+                searches={['goku', 'dragon ball']}
+            />
 
             {/* Gifs */}
-            <div className="gifs-container">
-                {mockGifs.map((gif) => (
-                    <div key={gif.id} className="gif-card">
-                        <img src={gif.url} alt={gif.title} />
-                        <h3>{gif.title}</h3>
-                        <p>{gif.width} * {gif.width} (1.5mb)</p>
-                    </div>
-                ))}
-            </div>
+            <GifList
+                gifs={mockGifs}
+            />
         </>
     )
 }
