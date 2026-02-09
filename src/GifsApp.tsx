@@ -14,6 +14,10 @@ export default function GifsApp() {
 
     }
 
+    const handleSearch = (query: string) => {
+        console.log({ query })
+    }
+
     return (
         <>
             {/* Header  */}
@@ -25,6 +29,7 @@ export default function GifsApp() {
             {/* Search */}
             <SearchBar
                 placeholder="Buscador de gifs"
+                onQuery={handleSearch}
             />
 
             {/* Busquedas previas */}
