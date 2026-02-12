@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Onclick } from '../../gifs/interfaces/giphy.response';
 
 export const MyCounterApp = () => {
   const [counter, setCounter] = useState(5);
